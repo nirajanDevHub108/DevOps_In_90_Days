@@ -1,0 +1,42 @@
+Shell scripting  commands
+
+1.how to create a file on linux command line.
+->touch  filename.sh
+
+2.to see the details of command  
+->man cmmnd name
+
+3.to see the permission on file.or listing file or folder
+->ls -ltr.     ls
+
+4.so many editor there you can use vim, nano,vi.
+->nano fileName, vi fileName, vim filename
+
+5.first line written in shell script file (shibann)
+->#!/bin/bash ,das, sh,ksh
+
+6.cat command is used to see the content of file
+
+->cat filename
+
+7.how to execute the shell command script file
+->sh file name or  ./ filename
+
+8.Give file permission given to you /security of file
+
+	•	-> chmod- grant permission to files.       Ch -change. Mod
+	•	->chmod filename 
+	•	chmod   - user permission ,which group, what is your permisiion(everyone)
+
+Chmod 777 filename granting permission  to all three.
+4-read
+2-write
+1-execute
+
+9.present working directory
+->pwd
+
+10.cd to go to different directory folder
+->
+
+11. Mkdir is used for creating directory.
