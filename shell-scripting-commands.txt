@@ -40,3 +40,71 @@ Chmod 777 filename granting permission  to all three.
 ->
 
 11. Mkdir is used for creating directory.
+
+12.to see the monitoring  of node health and procces
+
+-> top 
+
+12.to show all the storage and related information regarding files in virtual mechine
+
+->df 
+
+13.how we can find how many cpu  is in virtual machine.
+->nproc
+
+
+14.free for getting free amount of memory.
+-> free
+
+Set -x “debug mode”
+
+15. To show all the process  we use ps command
+-> ps -ef
+
+16.find the process  id run by amazon how can we take out
+->ps -ef | grep “amazon”
+Grep fetch the given queried string
+
+17.how can we take or fetch the process id.
+->ps -ef | grep “ amazon” | awk -F “ “ ‘ { print $2}’ 
+
+18.date | echo “today is”
+-> The date command in a Unix-like operating system outputs its result to stdout (standard output). Pipes (|) work by taking the output from stdout of one command and passing it as input to another command.
+
+19.awk filter out the information from the  output 
+->ps -ef | grep  amazon  | awk -F “ “ ‘ { print $2}’ 
+
+#!/bin/bash
+
+#!/bin/bash
+
+###############################
+# Author : NirajanDevHub
+# Date: 22/12/2024
+#
+# This script output of the health
+# Version: v1
+###############################
+
+20 to find the error in log file
+->logfile
+
+21. How can we retrieve log file	 by using log file location
+-> curl <url>
+
+man curl 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
