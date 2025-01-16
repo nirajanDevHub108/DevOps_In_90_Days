@@ -8,4 +8,6 @@ mkdir Akhil
 cd Akhil
 touch first_story second_story
 
+x=mississipi
 
+grep -o "s" <<<"$x" | wc -l 
