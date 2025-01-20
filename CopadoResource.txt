@@ -30,7 +30,21 @@ Note if  there is an Ip restrictions at the profile level we also needs to add t
 
 9.In Setup -> session setting ensure the  Lock session to the Ip address from which they originated is not enabled
 
+Package Licence 
+copado is a managed package that IS INSTALLED IN PRODUCTION ORG so all users who will be working with Copado must have  Salesforce licence that grant them access to manage package 
 
+Copado User Permission:
+Copado package provides Copado User permissons set which grant them access to all the copado functionality.
+clone the user permission set and modify according to your needs  approach may differ according to  roles: admin,dev,release manager ,QA ,scrum matser 
+
+Git Repository:
+it is version control and a code base storage . before setting up git repo we need a Git Service provider accounts , Github,Bitbucket,GitLab,AzureDevOps.
+
+Relevant sandboxes:
+you should have a clear defined release process decide how many sandboxes are required  like  Dev1,2, INT,UAT,hotfix,Production and so on.
+
+SYSAdmin USer:
+as you will be deploying all the changes to other environment you need to grant copado access to perform action in those env . then to do so you have to create a SysAdmin user in all sandboxes that you will use in release process
 
 
 
