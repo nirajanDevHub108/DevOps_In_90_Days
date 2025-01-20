@@ -46,6 +46,31 @@ you should have a clear defined release process decide how many sandboxes are re
 SYSAdmin USer:
 as you will be deploying all the changes to other environment you need to grant copado access to perform action in those env . then to do so you have to create a SysAdmin user in all sandboxes that you will use in release process
 
+Copado Concepts on Pipeline
+
+1.create a pipeline record as this will start pipeline wizard 
+
+pipeline : is a list of connection defining the path in which the comp is going to move  throgh the release mgmt procss.
+
+pipeline connection : it is  path from source org  to Destination org
+
+2.now authenticate the COE(center of excellence  org ) where copado is installed  also known as governance org. 
+
+3.credentials:is a connection btw a user and an environment ,it is authenticated via Oauth protocol where no password  is exchange.
+
+Environments : in copaodo it represents  a salesforce  org ,the org ID will be the external Id ,this means an environmnets have multiple credentials ,diff users of same organizations 
+
+Note :\
+**** Env is not created manually copado creates an environment from the first credentials  that is authenticated ****
+
+4. next step is to assign Copado licence to the user. with all the acces you need to perform your jobs.
+
+5. now its time to connect git repository to copado you have to authenticate  git in production so that copaod can  create Git snapshot record of production and run a snapshot in your master branch to initialize  your repo with all metadata,
+
+Git SanapShot: this record  defines the connection bw salesforce org and a Git Repo branch , this means every env have corresponding git snapshot record.
+
+
+
 
 
 
