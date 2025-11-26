@@ -21,6 +21,20 @@ log enabled
 
 2nd is options with arguments
 
+docker --version
+
+if we have to print only the version number 
+docker --version | cut -d ' ' -f3
+or
+docker --version | cut -d ' ' -f3 | tr -d ','
+
+Ansible :
+ansible --version |aek 'NR==1 {print $2'
+
+if we want to store in variable 
+dockerVersion=$(docker --version | cut -d ' ' -f3 | tr -d ',')
+
+
 options:
 
 -n: do not append a new line or trailing newline is suprresed
