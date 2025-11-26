@@ -1,3 +1,0 @@
-stating ci-cd classes for devops class
-
-day-1 of ci-cd
