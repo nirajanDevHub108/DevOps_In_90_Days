@@ -38,10 +38,10 @@ A structured, day-by-day learning journey covering Linux, Shell Scripting, DevOp
 
 ### 🟡 Day 3 — *(To Be Updated)*  
 - Add your Day-3 learning here  
-
+-source and cmmand line argumnets
 ---
 
-## 📘 Notes  
+## 📘 Notes   
 This repository tracks daily progress with clear summaries, examples, and code snippets to support a complete 90-day DevOps roadmap.
 
 ---
