@@ -1,3 +1,9 @@
 # DevOps_In_90_Days
 
-writeing sheel scripting code and command and Linux command
+week01- Linux and shell scripting langiage
+  -day-1: learned about  linux history basic file operating commands 
+  -day-2: learned about shell scripting ,bash, how to create ,execute,read,color,source ,export in shell , along with variable and echo options
+  -day-3:
+
+
+
