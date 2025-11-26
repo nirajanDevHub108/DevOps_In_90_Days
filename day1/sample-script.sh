@@ -1,11 +1,25 @@
 #!/bin/bash
 
-#create a folder
-mkdir sampletest
+x=5
+echo ${x}
 
-#create a file 
-cd sampletest
+#inputs and output for variable
 
-touch file1.txt file2.txt
+#input for variable
+#  directly defining var value in scripts itself
+#  using read command
+#  using source conecpt
+#  using export command
+#  using command line arguments 
+#  using options with the help of while loop
+
+#output the variable values
+
+# echo
+# cat commnd with here-doc
+# printf
+#
+
+#echo 
 
 
