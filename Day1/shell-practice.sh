@@ -52,6 +52,8 @@ source /home/nirajandevhub/devops/day1/container
 echo "${myVar}"
 
 
+today=$(date)
+echo "${today}"
 
 
 
