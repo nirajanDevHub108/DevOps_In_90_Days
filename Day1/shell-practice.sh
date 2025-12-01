@@ -47,13 +47,12 @@ else
 	echo "Timeout reached"
 fi
 COMMENT
-source /home/nirajandevhub/devops/day1/container
-
-echo "${myVar}"
-
 
 today=$(date)
 echo "${today}"
+
+ram="ram is  man"
+echo "${ram}"
 
 
 
