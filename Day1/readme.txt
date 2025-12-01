@@ -104,20 +104,12 @@ export command to provide inputs for var
 export command exports the variable from the shell,making them global and available in each sub-shell
 syntax: export varName=varValue
 
+command line arguments to provide inputs for variable
+passing arguments using command line 
 
+./filename value argumnets
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+it is accessed via $1,2,3..$n
+$0 represent the script file
+best practice is to use it using curly braces ${1}
+$# - gives you the number of argument passed to script

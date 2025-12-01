@@ -54,6 +54,13 @@ echo "${today}"
 ram="ram is  man"
 echo "${ram}"
 
+echo "$1"
+echo "$2"
+
+echo "${*}"
+
+
+
 
 
 
