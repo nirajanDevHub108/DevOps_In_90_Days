@@ -179,6 +179,30 @@ Output:
 /a/b
 /x/y
 
+basename:strips directory information or strips suffixes from the file names
+basename /home/nirajandevhub/devops/Day1
+day1
+
+
+bash Arrays:
+array is also a variable but it is useful to store multiple value into one variable
+creating an  array:
+declare -a myArray
+myArray=(1 2 3 4 5)
+we can store different values in one arr variable 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
