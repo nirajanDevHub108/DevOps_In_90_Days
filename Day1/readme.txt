@@ -113,3 +113,79 @@ it is accessed via $1,2,3..$n
 $0 represent the script file
 best practice is to use it using curly braces ${1}
 $# - gives you the number of argument passed to script
+
+
+shift 1 it will shift the values by 1
+Note:
+shift will have no operation at ${0}
+
+
+Basic operation on string
+
+get char/len of string: use #
+concaniation of string:  var = ${} ${}
+convert into lower and upper case:
+uppercase ${my_var^^}
+lowercase ${my_var,,}
+
+slicing of string:
+${strvar:startingindex:lemgth}
+
+bash =
+0123
+${myVar:2:3}
+we can also use cut command :
+
+echo "${myshell}" | cut -c 1-9
+
+replacing the part of the string:
+${varstr/oldstr/newstr}
+
+✅ What dirname does
+
+dirname removes the last part of a file path (everything after the last /)
+and returns only the directory path.
+
+✅ Basic rule
+
+It removes everything after the last slash
+
+If no slash, it returns "." (current directory)
+
+📌 Examples
+1️⃣ Normal path
+dirname /home/user/file.txt
+Output:
+/home/user
+2️⃣ Nested path
+dirname /opt/devops/scripts/test.sh
+
+Output:
+/opt/devops/scripts
+
+3️⃣ Path without /
+dirname file.txt
+
+Output:
+.
+(Meaning: current directory)
+
+🚀 dirname with multiple paths
+
+Yes, you can give multiple paths in one command:
+
+dirname /a/b/c.txt /x/y/z.log
+Output:
+/a/b
+/x/y
+
+
+
+
+
+
+
+
+
+
+

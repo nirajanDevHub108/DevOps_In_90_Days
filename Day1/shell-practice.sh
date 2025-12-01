@@ -54,10 +54,37 @@ echo "${today}"
 ram="ram is  man"
 echo "${ram}"
 
-echo "$1"
-echo "$2"
 
-echo "${*}"
+#echo "$1"
+#echo "$2"
+
+#echo "${*}"
+
+#echo "$1"
+#shift 1
+#echo "$2"
+
+#string Operation
+
+myShell=bash
+myShelllen=${#myShell}
+echo "The length of the ${myShell} is : ${myShelllen}"
+
+myScr="shell Scripting"
+
+myShellscr="${myShell} ${myScr}"
+
+echo "$myShellscr"
+
+echo "${myShell^^}"
+
+myVar=BASH
+echo "${myVar,,}"
+
+
+echo "${myScr:4:14}"
+
+echo "${myScr/shell/Bash}"
 
 
 
