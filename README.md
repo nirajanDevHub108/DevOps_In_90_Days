@@ -35,10 +35,25 @@ A structured, day-by-day learning journey covering Linux, Shell Scripting, DevOp
 - Wrote basic automation scripts  
 
 ---
+### 🟡 Day 3 — Bash Arrays, File Redirection & Exit Status
+- Learned about **arrays in Bash**:  
+  - Indexed arrays: `arr=(value1 value2 value3)`  
+  - Accessing elements: `${arr[0]}`, `${arr[@]}`, `${#arr[@]}`  
+  - Modifying elements: `arr[1]=new_value`  
+- Explored **associative arrays** (key-value pairs):  
+  - Declaring: `declare -A assoc_array`  
+  - Assigning values: `assoc_array[key]=value`  
+  - Accessing values: `${assoc_array[key]}`, `${!assoc_array[@]}`  
+- **File redirection and descriptors**:  
+  - Standard input/output: `>`, `>>`, `<` ,`<<<`
+  - Redirecting stderr: `2>`, `2>>`  
+  - Combining stdout and stderr: `&>`, `2>&1`  
+- Learned about **exit status**:  
+  - `$?` stores the exit status of the last command  
+  - `0` indicates success, non-zero indicates failure  
+  - Using `exit` in scripts to return specific status  
+- Applied these concepts in scripts to handle **arrays, I/O redirection, and error checking**.
 
-### 🟡 Day 3 — *(To Be Updated)*  
-- Add your Day-3 learning here  
--source and cmmand line argumnets
 ---
 
 ## 📘 Notes   
