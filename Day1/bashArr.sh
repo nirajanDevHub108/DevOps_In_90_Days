@@ -33,18 +33,6 @@ echo "After removing values : ${myValues[*]}"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 declare -a myVal
 myVal=(1 "hi" "bash shell" 5 6 7 8)
 
