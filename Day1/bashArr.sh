@@ -3,8 +3,47 @@
 
 declare -a myValues
 
-myValues=(1,2,3,45,)
+myValues=(1 2 3 4 5)
 echo "${myValues}"
+echo "${myValues[@]}"
+echo "${myValues[*]}"
+#retriving  i to n values
+
+echo "values from : ${myValues[@]:1:2}"
+
+#length of an array
+echo "${#myValues[@]}"
+
+#index of an array
+echo "${!myValues[@]}"
+
+#overwriting value :myArr=newVal
+#append any thing in the last
+
+myValues+=(8) #single value appending
+myValues+=(9 11) #double value appending
+
+echo "${myValues[*]}"
+
+#delete any value from an array 
+# unset myValues[3] index
+
+unset myValues[3]
+echo "After removing values : ${myValues[*]}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 declare -a myVal
 myVal=(1 "hi" "bash shell" 5 6 7 8)
