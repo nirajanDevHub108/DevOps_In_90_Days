@@ -190,13 +190,25 @@ creating an  array:
 declare -a myArray
 myArray=(1 2 3 4 5)
 we can store different values in one arr variable 
+values can be of same or diff types
+if values is having aspace then keep you value inside quotes
+ex: myVal=(1 ,"hi" "bash shell" 5 6 7 8"
 
 
+bash Dictionary variable
+Bash dictonory are the same array variable but these are useful to store values based on custom keys instead of index values
+
+declare -A myDict
+myDict=([name]=docker [version]=1.13.1)
 
 
+#exit status of a command 
+form inter value 0-255 when it is executed
+we can capture this return status using "$?"
+if value is 0 mean true else failed
 
-
-
+we can also store exit status in  var 
+like:  cmdStatus=$? or smdStatus=${?}
 
 
 

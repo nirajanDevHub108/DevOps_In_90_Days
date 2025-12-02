@@ -61,3 +61,37 @@ echo "first : ${color[0]} Third :${color[2]} last :${color[@]: -1}"
 
 echo "${#color[@]}"
 
+declare -a myArr
+declare -a myCmmdArg
+
+myArr=(4 5 7 9)
+
+echo "${myArr}"
+
+myCmmdArg=( ${*} )
+
+echo "${myCmmdArg}"
+
+declare -a myCmmndOut
+
+myCmmndOut=( $(ls) )
+
+echo "${myCmmndOut[*]}"
+echo "${#myCmmndOut[*]}"
+
+#Bash Dictonory implementation
+#
+
+declare -A myDict
+
+myDict=([name]=docker [version]=1.13.1)
+echo "${myDict[*]}"
+myDict[tooltype]=container
+echo "${myDict[@]}"
+
+
+
+
+
+
+
