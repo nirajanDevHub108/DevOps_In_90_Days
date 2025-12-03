@@ -1,4 +1,4 @@
-# 🚀 DevOps in 90 Days
+# 🚀 DevOps in 90 Days by - @nirajandevhub108
 
 A structured, day-by-day learning journey covering Linux, Shell Scripting, DevOps tools, Cloud, CI/CD, Automation, and more.
 
