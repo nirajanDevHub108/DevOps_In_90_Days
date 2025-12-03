@@ -5,7 +5,7 @@
 
 pakgName=$1
 
-command -v ${pakgname} && command -v ${pakgName} || echo "Package ${pakgName} is not found"
+command -v ${pakgname} && echo "The path of ${pakgName} is : $(command -v ${pakgName})" || echo "Package ${pakgName} is not found"
 
 
 
