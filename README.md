@@ -1,6 +1,4 @@
 
-
-
 # 🚀 DevOps in 90 Days
 
 A structured, day-by-day learning journey covering Linux, Shell Scripting, DevOps tools, Cloud, CI/CD, Automation, and more.
@@ -54,6 +52,21 @@ A structured, day-by-day learning journey covering Linux, Shell Scripting, DevOp
   - Using `exit` in scripts to return specific status  
 - Applied these concepts in scripts to handle **arrays, I/O redirection, and error checking**.
 
+###🟦 Day 4 — Command Chaining & Pipes
+
+Command chaining:
+   -; → run commands one after another
+   -&& → run next command only if previous succeeds
+   -|| → run next command only if previous fails
+   -Mixed logic: cmd1 && cmd2 || cmd3
+Pipes (|):
+Send output of one command to another
+Example: ps aux | grep nginx
+Finding command locations:
+command -v <cmd> (e.g., command -v python3)
+Code blocking & grouping:
+() → subshell execution
+{} → same‑shell grouping
 ---
 
 ## 📘 Notes   
