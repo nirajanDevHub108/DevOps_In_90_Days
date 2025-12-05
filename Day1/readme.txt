@@ -19,6 +19,17 @@ log enabled
 
 #echo [-neE] [arguments]
 
+
+ansible --version | awk "NR==1" | cut -d ' ' -f3 | tr -d ']'
+
+docker --version | cut -d ' ' -f3 | tr -d ','
+
+nginx -version  2>&1 | cut -d '/' -f2
+
+java -version 2>&1 | awk "NR==1" | cut -d ' ' -f3 |tr -d '"'
+
+
+
 2nd is options with arguments
 
 docker --version

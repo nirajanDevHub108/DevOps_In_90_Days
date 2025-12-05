@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# tool version and command operation of a given tool using command line
+# author:nirajandevhub108
+#
+
+toolName=${1}
+
+if [[ ${#} -ne 1 ]] ; then
+	echo " Script need input "
+	echo " Run this script"
+        echo "<scriptName> <toolName>"
+	exit 1
+fi
+
+if ! command -v ${toolName} 1>/dev/null 2>&1 ; then
+	echo " The tool: ${toolName} is not exist in the host"
+	exit 2
+fi
+
+case ${toolName}  in
+	docker )
+		docker --version | cut -d ' ' -f3 | tr -d ','
+		;;
+	ansible )
+		ansible --version | awk "NR==1" | cut -d ' ' -f3 | tr -d ']'
+		;;
+	java )
+		java -version 2>&1 | awk "NR==1" | cut -d ' ' -f3 |tr -d '"'
+		;;
+	nginx )
+		nginx -version  2>&1 | cut -d '/' -f2
+		;;
+	*)
+		echo " we dont have a logic to find the version of the tool : ${toolName}"
+		echo " just update this script to find the version of your tool"
+		;;
+esac
+
