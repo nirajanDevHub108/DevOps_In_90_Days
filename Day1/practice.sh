@@ -37,3 +37,15 @@ case ${toolName}  in
 		;;
 esac
 
+
+dockerVersion=$(docker --version | cut -d ' ' -f3 | tr -d ',')
+ansibleVersion=$(ansible --version | awk "NR==1" | cut -d ' ' -f3 | tr -d ']')
+javaVersion=$(java -version 2>&1 | awk "NR==1" | cut -d ' ' -f3 |tr -d '"')
+nginxVersion=$(nginx -version  2>&1 | cut -d '/' -f2)
+
+echo "ToolName    |     version"
+echo "Docker ----------${dockerVersion}"
+echo "ansible ----------${ansibleVersion}"
+echo "Java ----------${javaVersion}"
+echo "nginx ----------${nginxVersion}"
+
