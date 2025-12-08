@@ -17,7 +17,7 @@ if ! command -v ${toolName} 1>/dev/null 2>&1 ; then
 	echo " The tool: ${toolName} is not exist in the host"
 	exit 2
 fi
-
+<< PURPOSE
 case ${toolName}  in
 	docker )
 		docker --version | cut -d ' ' -f3 | tr -d ','
@@ -36,6 +36,7 @@ case ${toolName}  in
 		echo " just update this script to find the version of your tool"
 		;;
 esac
+PURPOSE
 
 
 if  command -v docker 1>/dev/null 2>&1 ; then
