@@ -38,7 +38,12 @@ case ${toolName}  in
 esac
 
 
-dockerVersion=$(docker --version | cut -d ' ' -f3 | tr -d ',')
+if  command -v docker 1>/dev/null 2>&1 ; then
+	dockerVersion=$(docker --version | cut -d ' ' -f3 | tr -d ',')
+else
+	dockerVersion="Not Found"
+fi
+
 ansibleVersion=$(ansible --version | awk "NR==1" | cut -d ' ' -f3 | tr -d ']')
 javaVersion=$(java -version 2>&1 | awk "NR==1" | cut -d ' ' -f3 |tr -d '"')
 nginxVersion=$(nginx -version  2>&1 | cut -d '/' -f2)
