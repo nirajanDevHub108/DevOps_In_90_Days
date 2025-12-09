@@ -23,3 +23,4 @@ if brew services list | grep -q "nginx.*started"; then
 else
     echo "nginx did not enter running state"
 fi
+
