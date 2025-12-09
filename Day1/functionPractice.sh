@@ -63,4 +63,17 @@ checkfile(){
 }
 checkfile calculator.sh
 
+#check if ther service is running or not
+
+checkService(){
+	serviceName=$1
+
+	if systemctl is-active --quiet "$serviceName"; then
+		echo " service '$serviceName' is active"
+	else 
+		echo "service '$serviceName' is in-active"
+	fi
+}
+
+checkService docker
 
