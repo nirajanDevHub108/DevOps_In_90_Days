@@ -78,7 +78,7 @@ checkService(){
 checkService docker
 
 #validate tool in host
-
+<< PURPOSE
 valdiateTool(){
 	if command -v ${1}  1>/dev/null 2>&1 ; then
 		echo " Installed path: $(command -v ${1})"
@@ -88,6 +88,20 @@ valdiateTool(){
 		return 1
 	fi
 }
+PURPOSE
+
+cat << EOF
+$(uname)
+$(whoami)
+EOF
+
+#ignoring variable and command expansion
+myShell="linux"
+
+cat << "EOF2"
+${myShell}
+$(whoami)
+EOF2
 
 
 
