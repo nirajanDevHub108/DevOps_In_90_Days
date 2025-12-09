@@ -77,3 +77,17 @@ checkService(){
 
 checkService docker
 
+#validate tool in host
+
+valdiateTool(){
+	if command -v ${1}  1>/dev/null 2>&1 ; then
+		echo " Installed path: $(command -v ${1})"
+		return 0
+	else
+		echo " Not Installed"
+		return 1
+	fi
+}
+
+
+
