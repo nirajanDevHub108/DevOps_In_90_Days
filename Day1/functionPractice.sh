@@ -40,3 +40,27 @@ main(){
 }
 main
 
+name(){
+	echo "hello, $1"
+}
+name nirajan
+
+todayDate(){
+	date
+
+}
+todayDate
+
+
+# to check if the file exist or not
+#
+checkfile(){
+	if [[ -f "$1" ]]; then
+		echo "File '$1' exixts"
+	else
+		echo "File '$1' does not exists"
+	fi
+}
+checkfile calculator.sh
+
+
