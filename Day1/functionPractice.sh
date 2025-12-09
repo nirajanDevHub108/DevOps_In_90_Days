@@ -116,4 +116,11 @@ FIRST LINE
 SECOND LINE
 EOF4
 
+#redirect to a file
+
+cat << EOF5 >/tmp/heredoc.txt
+FIRST LINE
+SECOND LINE
+EOF5
+
 
