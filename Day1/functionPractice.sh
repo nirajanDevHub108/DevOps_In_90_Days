@@ -103,5 +103,17 @@ ${myShell}
 $(whoami)
 EOF2
 
+#escape character
+cat << EOF3
+\${myShell}
+$(whoami)
+EOF3
+
+#piping
+
+cat << EOF4 | grep 'FIRST'
+FIRST LINE
+SECOND LINE
+EOF4
 
 
