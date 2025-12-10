@@ -88,13 +88,28 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 #Countdown Timer (User Input Based)
-read -p "enter countdown second: " sec
+# read -p "enter countdown second: " sec
 
-while [ $sec -gt 0 ] 
+# while [ $sec -gt 0 ] 
+# do
+# 	echo "⏳ Time left: $sec seconds"
+# 	sleep 1
+# 	sec=$((sec -1 ))
+# done
+
+#Password Prompt Until Correct
+correctPass="devops123"
+
+while true
 do
-	echo "⏳ Time left: $sec seconds"
-	sleep 1
-	sec=$((sec -1 ))
+	read -s -p "enter the password: " pass
+	echo
+	if [[ ${pass} == ${correctPass} ]]; then
+		echo "✔ Access Granted"
+		break
+	else
+		echo "❌ Wrong password. Try again."
+    fi
 done
 
 
