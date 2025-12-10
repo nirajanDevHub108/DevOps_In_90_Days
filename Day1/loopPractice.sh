@@ -28,9 +28,9 @@ else
 fi
 PURPOSE
 
-for each in $(ls) #ansible,vim, ${@}
-do
-     echo " your file is : ${each}"
+# for each in $(ls) #ansible,vim, ${@}
+# do
+#      echo " your file is : ${each}"
 
 #    if command -v ${each}  1>/dev/null 2>&1 ; then
 # 		echo "${each} is already deployed"
@@ -38,9 +38,22 @@ do
 # 		echo "${each} is not installed"
 #    fi
 
-done
+# done
 
-for (( i=0;i<5;i++ ))
-do 
-echo " this is one more loop syntax"
+# for (( i=0;i<5;i++ ))
+# do 
+# echo " this is one more loop syntax"
+# done
+
+declare -a myPkg
+declare -A devOpsTool
+myPkg=(ansible httpd nginx vim nc)
+devOpsTool=([containerTool]=docker [configurationTool]=ansible [integration]=jenkins)
+
+echo "${myPkg[@]}"
+echo "${!myPkg[@]}"
+
+for eachvalue in ${!myPkg[@]}
+do
+   echo " The value is : ${myPkg[${eachvalue}]}"
 done
