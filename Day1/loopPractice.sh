@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Check if nginx service exists
+<<PURPOSE
 if ! brew list nginx >/dev/null 2>&1 ; then
     echo "nginx is not installed. Installing now..."
     brew install nginx
@@ -25,4 +26,21 @@ if brew services list | grep -q "nginx.*started"; then
 else
     echo "nginx did not enter running state"
 fi
+PURPOSE
 
+for each in $(ls) #ansible,vim, ${@}
+do
+     echo " your file is : ${each}"
+
+#    if command -v ${each}  1>/dev/null 2>&1 ; then
+# 		echo "${each} is already deployed"
+#    else
+# 		echo "${each} is not installed"
+#    fi
+
+done
+
+for (( i=0;i<5;i++ ))
+do 
+echo " this is one more loop syntax"
+done
