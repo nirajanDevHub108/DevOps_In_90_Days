@@ -73,13 +73,19 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 #This script waits until a file appears:
-file="myfile.txt"
-while [ ! -f "$file" ]
+# file="myfile.txt"
+# while [ ! -f "$file" ]
+# do
+# 	echo "waiting for $file ..."
+# 	sleep 2
+# done
+# echo "$file is created"
+
+#While loop with input
+while read line
 do
-	echo "waiting for $file ..."
-	sleep 2
+	echo "you types: $line"
 done
-echo "$file is created"
 
 
 
