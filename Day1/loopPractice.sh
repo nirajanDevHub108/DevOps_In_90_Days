@@ -65,12 +65,21 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 #while loop
-count=1
-while [ $count -le 5 ]
+# count=1
+# while [ $count -le 5 ]
+# do
+# 	echo "Number: ${count}"
+# 	count=$((count +1))
+# done
+
+#This script waits until a file appears:
+file="myfile.txt"
+while [ ! -f "$file" ]
 do
-	echo "Number: ${count}"
-	count=$((count +1))
+	echo "waiting for $file ..."
+	sleep 2
 done
+echo "$file is created"
 
 
 
