@@ -2,6 +2,7 @@
 
 #finding server using for loop
 serverlistFile=${1}
+outputFile=${serverListFile}.out
 
 if [[ $# -ne 1 ]]; then
     echo "The script need one input, that is the file name"
@@ -17,17 +18,17 @@ else
     exit 2
 fi
 
-if [[ -e output.txt ]]; then
-    echo "output txt is all ready there now we are deleting it to write new info"
-    rm output.txt
+if [[ -e ${outputFile} ]]; then
+    echo " ${outputFile} is already there now we are deleting it to write new info"
+    rm ${outputFile}
 fi
 
-echo "ServerName : Environment" |tee -a output.txt
+echo "ServerName : Environment" |tee -a ${outputFile}
 for each in $(cat serverlist.txt)
 do  
     
     serverName=$(echo ${each} |cut -d '.' -f1)
     envName=$(echo ${each} |cut -d '.' -f2)
-    echo "${serverName} : ${envName}" | tee -a output.txt
+    echo "${serverName} : ${envName}" | tee -a ${outputFile}
 
 done
