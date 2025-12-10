@@ -82,9 +82,19 @@ myPkg=(ansible httpd nginx vim nc)
 # echo "$file is created"
 
 #While loop with input
-while read line
+# while read line
+# do
+# 	echo "you types: $line"
+# done
+
+#Countdown Timer (User Input Based)
+read -p "enter countdown second: " sec
+
+while [ $sec -gt 0 ] 
 do
-	echo "you types: $line"
+	echo "⏳ Time left: $sec seconds"
+	sleep 1
+	sec=$((sec -1 ))
 done
 
 
