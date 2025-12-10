@@ -2,7 +2,7 @@
 
 #finding server using for loop
 serverlistFile=${1}
-outputFile=${serverListFile}.out
+
 
 if [[ $# -ne 1 ]]; then
     echo "The script need one input, that is the file name"
@@ -17,7 +17,7 @@ else
     echo " input file does not exits on host"
     exit 2
 fi
-
+outputFile=${serverListFile}.out
 if [[ -e ${outputFile} ]]; then
     echo " ${outputFile} is already there now we are deleting it to write new info"
     rm ${outputFile}
