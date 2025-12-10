@@ -59,7 +59,18 @@ myPkg=(ansible httpd nginx vim nc)
 #    echo " The value is : ${myPkg[${eachvalue}]}"
 # done
 
-for eachvalue in ${!devOpsTool[@]}
-do 
-	echo "Value is : ${devOpsTool[${eachvalue}]}"
+# for eachvalue in ${!devOpsTool[@]}
+# do 
+# 	echo "Value is : ${devOpsTool[${eachvalue}]}"
+# done
+
+#while loop
+count=1
+while [ $count -le 5 ]
+do
+	echo "Number: ${count}"
+	count=$((count +1))
 done
+
+
+
