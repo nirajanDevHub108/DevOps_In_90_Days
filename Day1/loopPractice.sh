@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/opt/homebrew/bin/bash
+
 
 # Check if nginx service exists
 <<PURPOSE
@@ -47,13 +48,18 @@ PURPOSE
 
 declare -a myPkg
 declare -A devOpsTool
-myPkg=(ansible httpd nginx vim nc)
 devOpsTool=([containerTool]=docker [configurationTool]=ansible [integration]=jenkins)
+myPkg=(ansible httpd nginx vim nc)
 
-echo "${myPkg[@]}"
-echo "${!myPkg[@]}"
+# echo "${myPkg[@]}"
+# echo "${!myPkg[@]}"
 
-for eachvalue in ${!myPkg[@]}
-do
-   echo " The value is : ${myPkg[${eachvalue}]}"
+# for eachvalue in ${!myPkg[@]}
+# do
+#    echo " The value is : ${myPkg[${eachvalue}]}"
+# done
+
+for eachvalue in ${!devOpsTool[@]}
+do 
+	echo "Value is : ${devOpsTool[${eachvalue}]}"
 done
