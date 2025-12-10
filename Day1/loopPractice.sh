@@ -10,11 +10,13 @@ fi
 if brew services list | grep -q "nginx.*started"; then
     echo "nginx is already up and running"
     exit 0
-else
+for each in $(seq 4)
+do
     echo "nginx is not running"
     echo "starting it now ...."
     brew services start nginx
     sleep 10
+done
 fi
 
 # Verify again
