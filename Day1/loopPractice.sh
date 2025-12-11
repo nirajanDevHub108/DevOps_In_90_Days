@@ -124,24 +124,32 @@ myPkg=(ansible httpd nginx vim nc)
 # 	fi
 # done
 
-#4 Simple Menu System
-while true
-do
-	echo "-------- Menu --------"
-    echo "1. Show date"
-    echo "2. List files"
-    echo "3. Show uptime"
-    echo "4. Exit"
-    echo "----------------------"
+# #4 Simple Menu System
+# while true
+# do
+# 	echo "-------- Menu --------"
+#     echo "1. Show date"
+#     echo "2. List files"
+#     echo "3. Show uptime"
+#     echo "4. Exit"
+#     echo "----------------------"
     
-	read -p "choose an option" op
+# 	read -p "choose an option" op
 
-	case $op in
-		1) date ;;
-		2) ls ;;
-		3) uptime ;;
-		4) echo "Bye"; break ;;
-		*) echo "Invalid option" ;;
-	esac
-done
+# 	case $op in
+# 		1) date ;;
+# 		2) ls ;;
+# 		3) uptime ;;
+# 		4) echo "Bye"; break ;;
+# 		*) echo "Invalid option" ;;
+# 	esac
+# done
 
+#getopts arguments 
+file=""
+cout=0
+verbose=true
+
+while getopts "f:c:v" opt; do
+	case $opt in
+		f)
