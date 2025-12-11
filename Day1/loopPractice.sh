@@ -167,17 +167,17 @@ myPkg=(ansible httpd nginx vim nc)
 #📌 Script to Validate & Print Lines from a File
 
 file=""
-line=0
+lines=0
 
-while getopts "f:n" opt; do
+while getopts "f:n:" opt; do
 	case $opt in
-		f) $file="$OPTARG" ;;
-		n) $line="OPTARG" ;;
-		*) echo "Inavlid opton"; exit 1;;
+	  f) file="$OPTARG" ;;
+	  n) lines="$OPTARG" ;;
+	  *) echo "Inavlid opton"; exit 1;;
 	esac
 done
 
-if [[! -f "$file" ]]; then
+if [ ! -f "$file" ]; then
 	echo "file does not exist"
 	exit 1
 fi
@@ -186,4 +186,10 @@ echo "Printing $lines lines from $file:"
 count=0
 
 while read -r line; do
-	
+	echo $file
+	((count++))
+
+	if [[ $count -eq $lines ]]; then
+		break
+	fi
+done < "$file"
