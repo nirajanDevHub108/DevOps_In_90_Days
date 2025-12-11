@@ -152,4 +152,13 @@ verbose=true
 
 while getopts "f:c:v" opt; do
 	case $opt in
-		f)
+		f)file="$OPTARG";;
+		c)count="$OPTARG";;
+		v)verbose=true;;
+		*)echo "Unknown option" ;;
+	esac
+done
+
+echo "file: $file"
+echo "count: $count"
+echo "verbose: $verbose"
