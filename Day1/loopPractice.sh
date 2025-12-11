@@ -98,19 +98,29 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 #Password Prompt Until Correct
-correctPass="devops123"
+# correctPass="devops123"
 
+# while true
+# do
+# 	read -s -p "enter the password: " pass
+# 	echo
+# 	if [[ ${pass} == ${correctPass} ]]; then
+# 		echo "✔ Access Granted"
+# 		break
+# 	else
+# 		echo "❌ Wrong password. Try again."
+#     fi
+# done
+
+# 3 File Watcher – Detect File Changes
+file="serverlist.txt"
+last_modification=$(stat -f "%m" "$file")
 while true
 do
-	read -s -p "enter the password: " pass
-	echo
-	if [[ ${pass} == ${correctPass} ]]; then
-		echo "✔ Access Granted"
-		break
-	else
-		echo "❌ Wrong password. Try again."
-    fi
+	current_mod=$(stat -f "%m" "$file")
+	if [ "$current_mod" != "$last_modification" ]; then
+		echo "File '$file' chnaged"
+		last_modification=$current_mod
+	fi
 done
-
-
 
