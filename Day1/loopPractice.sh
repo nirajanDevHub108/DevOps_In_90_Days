@@ -113,14 +113,35 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 # 3 File Watcher – Detect File Changes
-file="serverlist.txt"
-last_modification=$(stat -f "%m" "$file")
+# file="serverlist.txt"
+# last_modification=$(stat -f "%m" "$file")
+# while true
+# do
+# 	current_mod=$(stat -f "%m" "$file")
+# 	if [ "$current_mod" != "$last_modification" ]; then
+# 		echo "File '$file' chnaged"
+# 		last_modification=$current_mod
+# 	fi
+# done
+
+#4 Simple Menu System
 while true
 do
-	current_mod=$(stat -f "%m" "$file")
-	if [ "$current_mod" != "$last_modification" ]; then
-		echo "File '$file' chnaged"
-		last_modification=$current_mod
-	fi
+	echo "-------- Menu --------"
+    echo "1. Show date"
+    echo "2. List files"
+    echo "3. Show uptime"
+    echo "4. Exit"
+    echo "----------------------"
+    
+	read -p "choose an option" op
+
+	case $op in
+		1) date ;;
+		2) ls ;;
+		3) uptime ;;
+		4) echo "Bye"; break ;;
+		*) echo "Invalid option" ;;
+	esac
 done
 
