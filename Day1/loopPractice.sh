@@ -222,15 +222,17 @@ myPkg=(ansible httpd nginx vim nc)
 #note
 #slect loop never stop we have to use logic to stop it
 
-PS3="Select your servic eto know the status:"
-select option in docker nginx sshd stop
-do 
-	case $option in
-		docker) docker info  s;;
-		nginx) brew services list | grep nginx ;;
-		sshd) brew services list | grep sshd ;;
-		stop) break ;;
-		*) echo " Invalid option" ;;
-	esac
+# PS3="Select your servic eto know the status:"
+# select option in docker nginx sshd stop
+# do 
+# 	case $option in
+# 		docker) docker info  s;;
+# 		nginx) brew services list | grep nginx ;;
+# 		sshd) brew services list | grep sshd ;;
+# 		stop) break ;;
+# 		*) echo " Invalid option" ;;
+# 	esac
 	
-done
+# done
+
+#getopts
