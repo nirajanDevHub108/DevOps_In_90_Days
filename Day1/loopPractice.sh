@@ -211,8 +211,25 @@ myPkg=(ansible httpd nginx vim nc)
 #   cnt=$((cnt+1))
 # done
 
-until brew status nginx 1>/dev/null 2>&1
+# until brew status nginx 1>/dev/null 2>&1
+# do 
+# 	sleep 3
+# 	echo "still nginx is not running"
+# done
+
+#select loop is useful to create automatic menu driven script
+
+#note
+#slect loop never stop we have to use logic to stop it
+
+PS3="Select your servic eto know the status:"
+select option in docker nginx sshd
 do 
-	sleep 3
-	echo "still nginx is not running"
+	case $option in
+		docker) docker info  s;;
+		nginx) brew services list | grep nginx ;;
+		sshd) brew services list | grep sshd ;;
+		*) echo " Invalid option" ;;
+	esac
+	
 done
