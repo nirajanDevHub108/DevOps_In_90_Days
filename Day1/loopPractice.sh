@@ -164,32 +164,32 @@ myPkg=(ansible httpd nginx vim nc)
 # echo "verbose: $verbose"
 
 #While + getopts + Real Logic
-#📌 Script to Validate & Print Lines from a File
+# #📌 Script to Validate & Print Lines from a File
 
-file=""
-lines=0
+# file=""
+# lines=0
 
-while getopts "f:n:" opt; do
-	case $opt in
-	  f) file="$OPTARG" ;;
-	  n) lines="$OPTARG" ;;
-	  *) echo "Inavlid opton"; exit 1;;
-	esac
-done
+# while getopts "f:n:" opt; do
+# 	case $opt in
+# 	  f) file="$OPTARG" ;;
+# 	  n) lines="$OPTARG" ;;
+# 	  *) echo "Inavlid opton"; exit 1;;
+# 	esac
+# done
 
-if [ ! -f "$file" ]; then
-	echo "file does not exist"
-	exit 1
-fi
+# if [ ! -f "$file" ]; then
+# 	echo "file does not exist"
+# 	exit 1
+# fi
 
-echo "Printing $lines lines from $file:"
-count=0
+# echo "Printing $lines lines from $file:"
+# count=0
 
-while read -r line; do
-	echo $file
-	((count++))
+# while read -r line; do
+# 	echo $file
+# 	((count++))
 
-	if [[ $count -eq $lines ]]; then
-		break
-	fi
-done < "$file"
+# 	if [[ $count -eq $lines ]]; then
+# 		break
+# 	fi
+# done < "$file"
