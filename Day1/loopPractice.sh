@@ -193,3 +193,11 @@ myPkg=(ansible httpd nginx vim nc)
 # 		break
 # 	fi
 # done < "$file"
+
+fileName=serverlist.txt
+while read -r line;
+do
+  echo "${line}"
+
+done < ${fileName}
+
