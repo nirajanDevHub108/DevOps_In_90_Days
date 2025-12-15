@@ -203,10 +203,16 @@ myPkg=(ansible httpd nginx vim nc)
 
 #until
 
-cnt=1
+# cnt=1
 
-until [[ $cnt -eq 3 ]]
-do
-  echo "hi"
-  cnt=$((cnt+1))
+# until [[ $cnt -eq 3 ]]
+# do
+#   echo "hi"
+#   cnt=$((cnt+1))
+# done
+
+until brew status nginx 1>/dev/null 2>&1
+do 
+	sleep 3
+	echo "still nginx is not running"
 done
