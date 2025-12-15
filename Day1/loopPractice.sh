@@ -194,10 +194,19 @@ myPkg=(ansible httpd nginx vim nc)
 # 	fi
 # done < "$file"
 
-fileName=serverlist.txt
-while read -r line;
+# fileName=serverlist.txt
+# while read -r line;
+# do
+#   echo "${line}"
+
+# done < ${fileName}
+
+#until
+
+cnt=1
+
+until [[ $cnt -eq 3 ]]
 do
-  echo "${line}"
-
-done < ${fileName}
-
+  echo "hi"
+  cnt=$((cnt+1))
+done
