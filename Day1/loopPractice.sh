@@ -236,3 +236,12 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 #getopts
+while getopts vsf opt
+do
+    case $opt in
+        v) docker --version ;;
+        s) brew status docker ;;
+        f) df -h ;;
+    esac
+
+done
