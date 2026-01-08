@@ -236,12 +236,41 @@ myPkg=(ansible httpd nginx vim nc)
 # done
 
 #getopts
-while getopts vsf opt
+# while getopts vsf opt
+# do
+#     case $opt in
+#         v) docker --version ;;
+#         s) brew status docker ;;
+#         f) df -h ;;
+#     esac
+
+# done
+while getopts hu:p: opt
 do
     case $opt in
-        v) docker --version ;;
-        s) brew status docker ;;
-        f) df -h ;;
-    esac
+        u) userName=${OPTARG} ;;
+        p) passwd=${OPTARG} ;;
+        h) echo " usage :"
+            echo "<scriptName> [-u userName] [-p password]"
+            exit 0
+            ;;
+        \?) echo " you option is invalid"
+            echo "<scriptName> [-u userName] [-p password]"
+            exit 0
+            ;;
 
+    esac
 done
+if [[ -z ${userName} ]] ; then
+    echo " failed to get userName "
+    exit 1
+fi
+if [[ -z ${passwd} ]] ; then
+    echo " failed to get password "
+    exit 2
+fi 
+cat << EOF
+userName: ${userName}
+password: ${passwd}
+EOF
+
